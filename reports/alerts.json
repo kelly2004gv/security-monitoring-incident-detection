@@ -1,0 +1,114 @@
+{
+    "generated_at": "2026-11-11T23:52:23.226198+00:00",
+    "summary": {
+        "total_logins": 18,
+        "successful_logins": 5,
+        "failed_logins": 13,
+        "unique_ips": 5,
+        "unique_accounts": 5,
+        "events_from_global_ips": 0,
+        "most_active_ips": [
+            [
+                "192.168.1.10",
+                6
+            ],
+            [
+                "203.0.113.10",
+                5
+            ],
+            [
+                "192.168.1.20",
+                3
+            ],
+            [
+                "192.168.1.30",
+                3
+            ],
+            [
+                "198.51.100.25",
+                1
+            ]
+        ],
+        "most_active_accounts": [
+            [
+                "employee1",
+                6
+            ],
+            [
+                "admin",
+                5
+            ],
+            [
+                "employee2",
+                3
+            ],
+            [
+                "employee4",
+                3
+            ],
+            [
+                "employee3",
+                1
+            ]
+        ]
+    },
+    "alert_count": 5,
+    "alerts": [
+        {
+            "rule": "RULE-001",
+            "severity": "HIGH",
+            "type": "Multiple failed logins from one IP",
+            "username": "employee1",
+            "source_ip": "192.168.1.10",
+            "time": "2026-11-01T09:07:00+00:00",
+            "details": "5 failed login attempts from this IP within 10 minutes.",
+            "recommendation": "Investigate the source IP and review related login activity."
+        },
+        {
+            "rule": "RULE-002",
+            "severity": "HIGH",
+            "type": "Multiple failed logins against one account",
+            "username": "employee1",
+            "source_ip": "192.168.1.10",
+            "time": "2026-11-01T09:07:00+00:00",
+            "details": "5 failed login attempts against this account within 10 minutes.",
+            "recommendation": "Verify the account owner and review authentication history."
+        },
+        {
+            "rule": "RULE-003",
+            "severity": "CRITICAL",
+            "type": "Successful login after repeated failures",
+            "username": "employee1",
+            "source_ip": "192.168.1.10",
+            "time": "2026-11-01T09:08:00+00:00",
+            "details": "Successful login after 5 failed attempts within 30 minutes.",
+            "recommendation": "Investigate the successful session, verify the user, and consider revoking suspicious sessions."
+        },
+        {
+            "rule": "RULE-001",
+            "severity": "HIGH",
+            "type": "Multiple failed logins from one IP",
+            "username": "admin",
+            "source_ip": "203.0.113.10",
+            "time": "2026-11-01T11:08:00+00:00",
+            "details": "5 failed login attempts from this IP within 10 minutes.",
+            "recommendation": "Investigate the source IP and review related login activity."
+        },
+        {
+            "rule": "RULE-002",
+            "severity": "HIGH",
+            "type": "Multiple failed logins against one account",
+            "username": "admin",
+            "source_ip": "203.0.113.10",
+            "time": "2026-11-01T11:08:00+00:00",
+            "details": "5 failed login attempts against this account within 10 minutes.",
+            "recommendation": "Verify the account owner and review authentication history."
+        }
+    ],
+    "invalid_rows": [
+        {
+            "row": 20,
+            "reason": "'INVALID_IP' does not appear to be an IPv4 or IPv6 address"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+
+# Security Monitoring and Incident Detection
+
+## Project Overview
+
+This project is a Python-based security monitoring tool designed to analyze authentication logs and identify potentially suspicious login activity.
+
+The goal is to demonstrate fundamental cybersecurity skills, including security log analysis, threat detection, Python programming, and incident investigation.
+
+## Project Objectives
+
+- Analyze authentication logs using Python.
+- Identify repeated failed login attempts.
+- Detect potentially suspicious successful logins following repeated failures.
+- Analyze usernames and source IP addresses.
+- Generate security alerts and investigation reports.
+- Practice documenting cybersecurity findings.
+
+## Technologies Used
+
+- Python 3
+- Linux / Ubuntu
+- Git and GitHub
+- CSV and JSON
+- Visual Studio Code
+
+## Detection Rules
+
+| Rule | Description |
+|---|---|
+| RULE-001 | Detects repeated failed login attempts from one IP address. |
+| RULE-002 | Detects repeated failed login attempts against one username. |
+| RULE-003 | Detects a successful login after repeated failed attempts. |
+
+## Project Structure
+
+- `data/` — Authentication log dataset.
+- `src/` — Python log analysis program.
+- `tests/` — Automated tests.
+- `reports/` — Generated alerts and investigation reports.
+- `docs/` — Detection rules, investigation notes, and glossary.
+- `screenshots/` — Evidence of project execution.
+
+## How to Run
+
+1. Clone this repository.
+2. Open the project directory in a terminal.
+3. Run:
+
+```bash
+python src/log_analyzer.py
+```
+
+## Run Automated Tests
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Cybersecurity Skills Demonstrated
+
+- Security log analysis
+- Authentication monitoring
+- Brute-force detection concepts
+- IP address analysis
+- Python scripting
+- Automated testing
+- Incident investigation
+- Technical documentation
+
+## Disclaimer
+
+This project uses simulated authentication logs for educational purposes. Detection results are intended for learning and demonstration, not as a production security monitoring system.

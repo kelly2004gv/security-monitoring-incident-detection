@@ -1,0 +1,59 @@
+SECURITY MONITORING REPORT
+==========================
+
+Total login events: 18
+Successful logins: 5
+Failed logins: 13
+Unique IP addresses: 5
+Unique accounts: 5
+Alerts generated: 5
+Invalid records: 1
+
+SECURITY ALERTS
+===============
+
+Rule: RULE-001
+Severity: HIGH
+Type: Multiple failed logins from one IP
+Account: employee1
+Source IP: 192.168.1.10
+Time: 2026-11-01T09:07:00+00:00
+Details: 5 failed login attempts from this IP within 10 minutes.
+Recommendation: Investigate the source IP and review related login activity.
+----------------------------------------
+Rule: RULE-002
+Severity: HIGH
+Type: Multiple failed logins against one account
+Account: employee1
+Source IP: 192.168.1.10
+Time: 2026-11-01T09:07:00+00:00
+Details: 5 failed login attempts against this account within 10 minutes.
+Recommendation: Verify the account owner and review authentication history.
+----------------------------------------
+Rule: RULE-003
+Severity: CRITICAL
+Type: Successful login after repeated failures
+Account: employee1
+Source IP: 192.168.1.10
+Time: 2026-11-01T09:08:00+00:00
+Details: Successful login after 5 failed attempts within 30 minutes.
+Recommendation: Investigate the successful session, verify the user, and consider revoking suspicious sessions.
+----------------------------------------
+Rule: RULE-001
+Severity: HIGH
+Type: Multiple failed logins from one IP
+Account: admin
+Source IP: 203.0.113.10
+Time: 2026-11-01T11:08:00+00:00
+Details: 5 failed login attempts from this IP within 10 minutes.
+Recommendation: Investigate the source IP and review related login activity.
+----------------------------------------
+Rule: RULE-002
+Severity: HIGH
+Type: Multiple failed logins against one account
+Account: admin
+Source IP: 203.0.113.10
+Time: 2026-11-01T11:08:00+00:00
+Details: 5 failed login attempts against this account within 10 minutes.
+Recommendation: Verify the account owner and review authentication history.
+----------------------------------------
